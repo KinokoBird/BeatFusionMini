@@ -45,17 +45,11 @@ startButton.addEventListener("click", () => {
 
 
 howToPlayButton.addEventListener("click", () => {
-    if (playDesFlag == false)
-    {
-        playDescription.style.display = "block";
-        playDesFlag = true;
-    }
-    else if (playDesFlag == true)
-    {
-        playDescription.style.display = "none";
-        playDesFlag = false;
-    }
-    
+     playDescription.style.display = "block";
+});
+
+playDescription.addEventListener("click", () => {
+    playDescription.style.display = "none";
 });
 
 function moveDrum() {
