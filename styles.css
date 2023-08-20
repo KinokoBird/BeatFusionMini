@@ -12,11 +12,10 @@ body {
     width: 600px;
     height: 400px;
     border: 2px solid #000;
-    background-image: url('pakupaku.png''); /* ここで背景画像を指定 */
+    background-image: url('pakupaku.png'); /* ここで背景画像を指定 */
     background-size: cover; /* 背景画像をコンテナに合わせて調整 */
     overflow: hidden;
 }
-
 
 #timingZone {
     position: absolute;
@@ -84,6 +83,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
+
 .hp-bar {
     position: absolute;
     width: 100px;
@@ -127,6 +127,24 @@ body {
     top: 80%;
     transform: translate(-50%, -50%);
 }
+
+.how-to-play-button {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+
+#playDescription {
+    display: none;
+    border: 2px solid #fff;
+    background-image: url('description.png'); /* ここで背景画像を指定 */
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0px;
+    left: 120px;
+  }
 
 .score-display {
     position: absolute;
