@@ -139,11 +139,11 @@ body {
     display: none;
     border: 2px solid #fff;
     background-image: url('description.png'); /* ここで背景画像を指定 */
+    background-repeat: no-repeat;
     position: absolute;
-    width: 400px;
-    height: 300px;
-    top: 0px;
-    left: 120px;
+    width: 600px;
+    height: 400px;
+
   }
 
 .score-display {
