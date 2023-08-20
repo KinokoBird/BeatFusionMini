@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <button id="startButton" class="centered-button" onclick="startGame()">Start Game</button>
+        <button id="startButton" class="centered-button" onclick="startGame()">ゲームスタート</button>
+        <button id="howToPlayButton" class="how-to-play-button" onclick="startGame()">遊び方</button>
         <audio id="backgroundMusic" loop>
             <source src="music.mp4" type="audio/mp4">
             Your browser does not support the audio element.
@@ -34,6 +35,7 @@
             <h1>Game Over</h1>
             <button id="retryButton" onclick="retryGame()">Retry</button>
         </div>
+        <div id="playDescription"></div>
     </div>
     <script src="script.js"></script>
 </body>
