@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rhythm Game</title>
+</head>
+<body>
+    <div class="container">
+        <button id="startButton" class="centered-button" onclick="startGame()">Start Game</button>
+        <audio id="backgroundMusic" loop>
+            <source src="music.mp4" type="audio/mp4">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="cursorMoveSound">
+            <source src="決定ボタンを押す39.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="damageSound">
+            <source src="足首がグキッ .mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="scoreDisplay" class="score-display">Score: 0</div>
+        <div id="timingZone"></div>
+        <div id="drum" ></div>
+        <div id="drum1"></div>
+        <div id="drum2"></div>
+        <div id="drum3"></div>
+        <div id="drum4"></div>
+        <div id="hpBar" class="hp-bar"></div>
+        <div id="damageZone" class="damage-zone"></div>
+        <div id="gameOverPopup" class="popup">
+            <h1>Game Over</h1>
+            <button id="retryButton" onclick="retryGame()">Retry</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
