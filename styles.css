@@ -12,7 +12,7 @@ body {
     width: 600px;
     height: 400px;
     border: 2px solid #000;
-    background-image: url('background.jpg'); /* ここで背景画像を指定 */
+    background-image: url('pakupaku.png''); /* ここで背景画像を指定 */
     background-size: cover; /* 背景画像をコンテナに合わせて調整 */
     overflow: hidden;
 }
