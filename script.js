@@ -1,14 +1,17 @@
 let hp = 5;
 let drumInterval;
-let drumInterval1;
-let drumInterva2;
+let drumInterva1;
+let drumInterval2;
 let drumInterval3;
-let drumInterva4;
+let drumInterval4;
 let score = 0;
 
 let gameOver = false;
+let playDesFlag = false;
 
 const startButton = document.getElementById("startButton");
+const howToPlayButton = document.getElementById("howToPlayButton");
+const playDescription = document.getElementById("playDescription");
 const timingZone = document.getElementById("timingZone");
 const drum = document.getElementById("drum");
 const drum1 = document.getElementById("drum1");
@@ -26,6 +29,8 @@ const damageSound = document.getElementById("damageSound");
 
 startButton.addEventListener("click", () => {
     startButton.style.display = "none";
+    howToPlayButton.style.display = "none";
+    playDescription.style.display = "none";
     resetScore();
     drumInterval = setInterval(moveDrum, 5);
     drumInterval1 = setInterval(moveDrum1, 10);
@@ -38,6 +43,20 @@ startButton.addEventListener("click", () => {
     backgroundMusic.play();  // 音楽再生
 });
 
+
+howToPlayButton.addEventListener("click", () => {
+    if (playDesFlag == false)
+    {
+        playDescription.style.display = "block";
+        playDesFlag = true;
+    }
+    else if (playDesFlag == true)
+    {
+        playDescription.style.display = "none";
+        playDesFlag = false;
+    }
+    
+});
 
 function moveDrum() {
     let drumPosition = parseInt(getComputedStyle(drum).getPropertyValue("left"));
@@ -225,6 +244,7 @@ function retryGame() {
     damageZone.style.pointerEvents = "none";
     gameOverPopup.style.display = "none";
     startButton.style.display = "block";
+    howToPlayButton.style.display = "block";
     backgroundMusic.pause();
 }
 
